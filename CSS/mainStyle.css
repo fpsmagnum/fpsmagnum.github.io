@@ -84,7 +84,9 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-image: url("/Assets/splashPageBack.JPG");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vw;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -633,7 +635,7 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
-    z-index: 100;
+  z-index: 1000;
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
@@ -7747,7 +7749,7 @@ textarea.form-control-lg {
 
 .text-light {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(140, 140, 140, var(--bs-text-opacity)) !important;
 }
 
 .text-dark {

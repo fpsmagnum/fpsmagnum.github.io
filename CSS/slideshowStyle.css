@@ -3,51 +3,30 @@
 /* Slideshow container */
 .slideshow-container {
   z-index: -1;
-  width: 100%;
-  height: 700px;
   position: relative;
-  margin: auto;
+  background-color: black;
 }
 
 /* Hide the images by default */
 .indexSlides {
   display: none;
-  width: 100%;
-
-
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.indexSlides > img {
+  object-fit: contain;
+  max-height: 1000px;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+:root {
+  --light: 80;
+  --threshold: 60;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  mix-blend-mode: difference;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -55,11 +34,9 @@
   text-align: center;
 }
 
-
 /* The dots/bullets/indicators */
 .slideDot {
   position: relative;
-  top: 50px;
   cursor: pointer;
   height: 15px;
   width: 15px;
