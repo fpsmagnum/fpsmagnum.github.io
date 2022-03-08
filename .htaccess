@@ -1,0 +1,12 @@
+<FilesMatch "^\.ht">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+DirectoryIndex /Art/index.html /Art/index.php
+DirectoryIndex /Models/index.html /Models/index.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.+) *.php
