@@ -13,5 +13,5 @@ RewriteRule ^ index.php
 
 </IfModule>
 <IfModule mime_module>
-        AddHandler application/x-httpd-ea-php72 .php .php7 .phtml 
+        AddHandler application/x-httpd-php .php .html .htm
 </IfModule>
