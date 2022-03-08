@@ -37,30 +37,48 @@
                 $("#navContainer").load("/HTMLComponents/navBar.html");
             });
         </script>
+
+        <div class="card">
+            <h1 class="card-header">Photography and Drawings</h1>
+            <h3 class="card-subtitle">Assorted Gallery</h3>
+            <div class="card-body">
+                <div id="gallery">
+                    <?php
+                        $images = glob("../Assets/Photography/*");
+                        for ($i=0; $i<count($images); $i++)
+                        {
+                            $image = $images[$i];
+                            $supported_file = array(
+                                    'gif',
+                                    'jpg',
+                                    'jpeg',
+                                    'png'
+                            );
+
+                            $ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+                            if (in_array($ext, $supported_file)) {
+                                echo '<img src="'.$image .'" class="card-img"/>';
+                            } else {
+                                continue;
+                            }
+                        }
+          
+                    ?>
+                </div>
+                
+                
+
+
+            </div>
+        </div>
+
         </main>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto">
-                        <div class="small m-0 text-white">Copyright &copy; Your Website 2022</div>
-                    </div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="#!">Privacy</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Terms</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Contact</a>
-                    </div>
-                </div>
-            </div>
         </footer>
     
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-        <!-- Core theme JS-->
-        <script src="JS/mainScripts.js"></script>
     
     </body>
     

@@ -39,11 +39,38 @@
         </script>
 
         <div class="card">
-            <h1 class="card-header">Coming Soon</h1>
-            <h3 class="card-subtitle">Still In Development</h3>
-            <p class="card-body">Working out how best to present as much quality content here as possible</p>
+            <h1 class="card-header">Painted Models</h1>
+            <h3 class="card-subtitle">Assorted Gallery</h3>
+            <div class="card-body">
+                <div id="gallery">
+                    <?php
+                        $images = glob("../Assets/PaintedModels/*");
+                        for ($i=0; $i<count($images); $i++)
+                        {
+                            $image = $images[$i];
+                            $supported_file = array(
+                                    'gif',
+                                    'jpg',
+                                    'jpeg',
+                                    'png'
+                            );
+
+                            $ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+                            if (in_array($ext, $supported_file)) {
+                                echo '<img src="'.$image .'" class="card-img"/>';
+                            } else {
+                                continue;
+                            }
+                        }
+          
+                    ?>
+                </div>
+                
+                
+
+
+            </div>
         </div>
-        
     </main>
     <!-- Footer-->
     <footer class="bg-dark py-4 mt-auto">
@@ -51,9 +78,6 @@
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core theme JS-->
-    <script src="JS/mainScripts.js"></script>
 
 </body>
 
