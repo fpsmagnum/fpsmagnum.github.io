@@ -92,14 +92,28 @@ body {
 
 .language-icon {
   object-fit: contain;
-  width: 40px;
-  max-height: 40px;
+  width: 80px;
+  max-height: 80px;
+  margin-right: 20%;
 }
 
 .weblink-icon {
   object-fit: contain;
+  width: 80px;
+  max-height: 80px;
+}
+
+.weblink-icon-small {
+  object-fit: contain;
   width: 40px;
   max-height: 40px;
+  margin-right: 2%;
+}
+
+.my-image {
+  object-fit: contain;
+  margin: auto;
+  border-radius: 6px;
 }
 
 hr {
@@ -4526,9 +4540,10 @@ textarea.form-control-lg {
 
 .card {
   position: relative;
-  margin: 80px auto 40px auto;
+  margin: 80px auto 80px auto;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   min-width: 0;
   word-wrap: break-word;
   background-color: rgba(100, 100, 100, 1);
@@ -4538,6 +4553,24 @@ textarea.form-control-lg {
   width: 90%;
   text-align: center;
 }
+
+.nested-card {
+  flex: 1 0 33%;
+  position: relative;
+  margin: 10px auto 10px auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 33%;
+  word-wrap: break-word;
+  background-color: rgba(80, 80, 80, 1);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  width: 33%;
+  text-align: center;
+}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -4585,6 +4618,8 @@ textarea.form-control-lg {
   color: rgba(220, 220, 220, 1);
 }
 .card-text {
+  font-size: larger;
+  font-weight: 600;
   color: rgba(220, 220, 220, 1);
 }
 
@@ -4638,12 +4673,6 @@ textarea.form-control-lg {
   border-radius: calc(0.25rem - 1px);
 }
 
-.card-img-small {
-  object-fit: contain;
-  margin: 5px;
-  max-height: 20vw;
-}
-
 .card-img,
 .card-img-top,
 .card-img-bottom {
@@ -4652,9 +4681,9 @@ textarea.form-control-lg {
   max-height: 20vw;
 }
 
-.card-img:hover {
-  z-index: 10000;
-  transform: scale(1.5);
+.card-img:hover{
+  z-index: 1000;
+  transform: scale(1.75);
 }
 
 .card-img,
